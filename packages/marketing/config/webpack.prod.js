@@ -8,6 +8,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js", //for caching purpose
+    publicPath: "/marketing/latest/", //telling where to find the assets for this container this will prepend to all the assets and files
   },
   plugins: [
     new ModuleFederationPlugin({
