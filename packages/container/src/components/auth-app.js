@@ -2,7 +2,7 @@ import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-const AuthApp = () => {
+const AuthApp = ({ onSignedIn }) => {
   const ref = useRef(null);
   const history = useHistory();
 
@@ -15,9 +15,12 @@ const AuthApp = () => {
           history.push(nextPathname);
         }
       },
+      //to manage sign in state from container from AuthApp 
+      // onSignedIn called in app.js to set signedIn data
+      onSignInCallback: onSignedIn,
     });
     history.listen(onParentNavigate);
-  }, []);
+  }, [history, onSignedIn]);
 
   return <div ref={ref} />;
 };
