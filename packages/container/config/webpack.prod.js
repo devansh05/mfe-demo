@@ -16,6 +16,7 @@ const prodConfig = {
       remotes: {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`, //telling where to find the remote container
         auth: `auth@${domain}/auth/latest/remoteEntry.js`, // add auth remote for production
+        dashboard: `dashboard@${domain}/dashboard/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

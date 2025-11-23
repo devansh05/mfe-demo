@@ -24,6 +24,7 @@ const devConfig = {
         //second marketing is the name given in that remote container's ModuleFederationPlugin
         marketing: "marketing@http://localhost:8081/remoteEntry.js", //telling where to find the remote container
         auth: "auth@http://localhost:8082/remoteEntry.js", //telling where to find the remote container
+        dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
       },
       exposes: {},
       shared: packageJson.dependencies,
